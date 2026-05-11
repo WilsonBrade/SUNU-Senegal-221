@@ -1,0 +1,114 @@
+/* Container principal de la carte */
+.tarif {
+    height: 550px; /* Ajusté pour le contenu */
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0; /* Gris clair comme l'image */
+    margin: auto;
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+}
+
+/* Header : Titre et sous-titre */
+.tarif-header {
+    text-align: center;
+}
+
+.tarif-header h4 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: #1f2937;
+}
+
+.tarif-header p {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* Main : Prix et Liste */
+.tarif-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; /* Prend l'espace disponible */
+}
+
+.price {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.price h3 {
+    color: #be123c;
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.price p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-top: -5px;
+}
+
+/* Liste des avantages */
+.tarif-avantages ul {
+    list-style: none; /* Enlever les points noirs */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.tarif-avantages li {
+    line-height: 2.2;
+    color: #374151;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Ajout des icônes avant le texte */
+.tarif-avantages li::before {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* On cible les 3 premiers (check verts) */
+.tarif-avantages li:nth-child(-n+3)::before {
+    content: "✓";
+    color: #10b981;
+}
+
+/* On cible les 3 derniers (croix grises) */
+.tarif-avantages li:nth-child(n+4)::before {
+    content: "✕";
+    color: #9ca3af;
+}
+
+/* Footer : Le bouton */
+.tarif-footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ajoutons un bouton dans ton HTML ou stylisons-le ici */
+.tarif-footer::after {
+    content: "Choisir Basique";
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #be123c;
+    color: #be123c;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tarif-footer:hover::after {
+    background-color: #be123c;
+    color: white;
+}
